@@ -101,7 +101,9 @@ public class RCTImageSequenceView extends ImageView {
             DownloadImageTask task = new DownloadImageTask(index, uris.get(index), getContext());
             activeTasks.add(task);
 
-            task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            if (task != null) {
+                task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            }
         }
     }
 
