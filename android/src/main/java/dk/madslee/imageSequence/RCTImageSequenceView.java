@@ -89,9 +89,9 @@ public class RCTImageSequenceView extends ImageView {
     public void setImages(ArrayList<String> uris) {
         if (isLoading()) {
             // cancel ongoing tasks (if still loading previous images)
-            for (int index = 0; index < activeTasks.size(); index++) {
-                activeTasks.get(index).cancel(true);
-            }
+            //for (int index = 0; index < activeTasks.size(); index++) {
+            //    activeTasks.get(index).cancel(true);
+            //}
         }
 
         activeTasks = new ArrayList<>(uris.size());
